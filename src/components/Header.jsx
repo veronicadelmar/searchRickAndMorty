@@ -51,7 +51,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({setInputSearch, setCurrentPage}) {
+
+  const handleChangeInput = (e) => {
+    setInputSearch(e.target.value)
+    setCurrentPage(1)
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }} >
       <AppBar position="static" sx={{ backgroundColor: '#2a8736' }} >
@@ -79,6 +85,7 @@ export default function Header() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
+              onChange={handleChangeInput}
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>

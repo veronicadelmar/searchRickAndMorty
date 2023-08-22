@@ -15,16 +15,13 @@ export default function CardCharacter({name, status, image}) {
       title={name}
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
+      <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'shlop2'}}>
         {name}
       </Typography>
-      <Typography variant="body2" color="text.secondary">
+      <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'shlop2'}}>
         status: {status}
       </Typography>
     </CardContent>
-    <CardActions>
-      <Button size="small">Share</Button>
-    </CardActions>
   </Card>
   );
 }

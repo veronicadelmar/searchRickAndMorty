@@ -1,6 +1,7 @@
 import './index.css'
 import Header from './components/Header'
 import ContainCards from './components/ContainCards'
+import PaginationApp from './components/PaginationApp'
 import { useEffect, useState } from 'react'
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     <>
       <Header setInputSearch={setInputSearch} setCurrentPage={setCurrentPage} />
       <ContainCards characters={characters} />
-
+      <PaginationApp setCurrentPage={setCurrentPage} currentPage={currentPage} />
     </>
   )
 }
